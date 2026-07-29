@@ -1,0 +1,28 @@
+{
+  "name": "@coding-agent/runtime",
+  "version": "1.0.0",
+  "description": "Browser-based AI coding agent — backend runtime (node-pty + WebSocket)",
+  "type": "module",
+  "main": "./index.js",
+  "bin": {
+    "coding-agent-runtime": "./bin/cli.js"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./server": "./src/create-server.js"
+  },
+  "files": [
+    "index.js",
+    "bin/",
+    "src/"
+  ],
+  "scripts": {
+    "start": "node index.js",
+    "build": "node -e \"console.log('runtime: no build needed')\""
+  },
+  "dependencies": {
+    "node-pty": "^1.0.0",
+    "uuid": "^11.0.0",
+    "ws": "^8.18.0"
+  }
+}

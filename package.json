@@ -1,0 +1,15 @@
+{
+  "name": "coding-agent",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Browser-based AI coding agent — monorepo",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run start --workspace=@coding-agent/runtime",
+    "build": "npm run build --workspace=@coding-agent/sdk",
+    "build:all": "npm run build && npm run build --workspace=@coding-agent/runtime",
+    "install:all": "npm install"
+  }
+}

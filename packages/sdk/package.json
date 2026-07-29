@@ -1,0 +1,36 @@
+{
+  "name": "@coding-agent/sdk",
+  "version": "1.0.0",
+  "description": "Browser-based AI coding agent — frontend SDK",
+  "type": "module",
+  "main": "./dist/coding-agent-sdk.es.js",
+  "module": "./dist/coding-agent-sdk.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/coding-agent-sdk.es.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./iife": "./dist/coding-agent-sdk.iife.js",
+    "./vite-plugin": {
+      "import": "./src/vite-plugin.ts",
+      "types": "./src/vite-plugin.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "src/vite-plugin.ts"
+  ],
+  "scripts": {
+    "build": "vite build && tsc --emitDeclarationOnly",
+    "dev": "vite build --watch"
+  },
+  "dependencies": {
+    "@xterm/addon-fit": "^0.10.0",
+    "@xterm/xterm": "^5.5.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "vite": "^6.0.0"
+  }
+}
